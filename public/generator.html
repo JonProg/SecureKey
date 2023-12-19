@@ -12,9 +12,10 @@
                 <div id="output">
                     Selecione as Opções
                 </div>
-                <div>
-                    <input type="range" min="8" max="50" name="" id="range-words">
-                    <label for="range-words" class="value-range">50</label>
+                <div class="box-range">
+                    <input type="range" value="8" min="8" max="50" id="range-words"
+                    onmousemove="rangeSlider(this.value)">
+                    <label for="range-words" id="value-range">8</label>
                 </div>
                 <div class="checkers">
                     <div>
@@ -42,5 +43,11 @@
             </form>
         </main>
         <script src="./assets/js/bundle.js"></script>
+        <script>
+            function rangeSlider(value){
+                document.getElementById("value-range").innerHTML
+                =value;
+            }
+        </script>
     </body>
 </html>
