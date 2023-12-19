@@ -1,9 +1,3 @@
-//import { createPassword } from "./genPassword";
-
-const output = document.getElementById('output');
-const rangeNumber = document.getElementById('range-words');
-const checkers = document.querySelectorAll('input[type="checkbox"]');
-
 function letterUpper(){
     let randUpper = Math.round(Math.random() * (90-65) + 65);
     return String.fromCharCode(randUpper);
@@ -19,14 +13,13 @@ function simbolyKeys(){
     return String.fromCharCode(randKeys);
 }
 
-document.addEventListener('submit', e =>{
-    e.preventDefault();
+export function createPassword(checkers, size, output){
     let password = '';
 
-    for(checker of checkers){
+    for(let checker of checkers){
         if(checker.checked){
             if(checker.id === "upper-letter"){
-                for(let index = 0; index < rangeNumber.value; index++){
+                for(let index = 0; index < size; index++){
                     password += letterUpper();
                 }
             }
@@ -38,7 +31,7 @@ document.addEventListener('submit', e =>{
                         i++;
                     }
                 }else{
-                    for(let index = 0; index < rangeNumber.value; index++){
+                    for(let index = 0; index < size; index++){
                         password += lowerCase(); 
                     }
                 }
@@ -52,7 +45,7 @@ document.addEventListener('submit', e =>{
                         i+=2;
                     }
                 }else{
-                    for(let index = 0; index < rangeNumber.value; index++){
+                    for(let index = 0; index < size; index++){
                         let randNum = Math.round(Math.random() * (9-0) + 0);
                         password += randNum; 
                     }
@@ -66,17 +59,13 @@ document.addEventListener('submit', e =>{
                         i+=3;
                     }
                 }else{
-                    for(let index = 0; index < rangeNumber.value; index++){
+                    for(let index = 0; index < size; index++){
                         password += simbolyKeys(); 
                     }
                 }
             }
         }
-        }
+    }
     
     output.innerText = password ? password:'NADA MARCADO';
-    }
-)
-
-
-
+}
