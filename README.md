@@ -1,5 +1,5 @@
 # SecureKey
-Um gerador de senhas feito em javascript, html e css.
+O repositório "secureKey" é um projeto dedicado à criação de senhas fortes e seguras, fornecendo uma solução confiável para proteger informações sigilosas. O objetivo deste projeto é permitir que os usuários gerem senhas robustas, evitando assim a utilização de senhas fracas e repetitivas que podem ser facilmente adivinhadas ou comprometidas.
 
 ## Project
 
