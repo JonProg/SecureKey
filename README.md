@@ -2,10 +2,10 @@
 Um gerador de senhas feito em javascript, html e css.
 
 #
-## Project
+## <img src="to_readme\config_emoji.png" width="22" height="22" align="center" ></img>Project 
 
 #
 
-[![securepass.gif](https://i.postimg.cc/wvM7qb1Z/securepass.gif)](https://postimg.cc/vgRQXhLt)
+<h2><img src="imgs_readme/desktop.png" width="22" height="22" align="center"></img>Project</h2>
 
 #
